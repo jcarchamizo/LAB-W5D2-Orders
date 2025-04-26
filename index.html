@@ -11,54 +11,54 @@
         <h1>Place your Pizza Order!</h1>
         <form action="/pedido" method="GET">
             
-            <!-- Nombre y trato -->
-            <label for="trato">Trato:</label>
-            <select name="trato" id="trato" required>
-                <option value="Sr.">Mr.</option>
-                <option value="Sra.">Mrs.</option>
-                <option value="Otre"></option>
+            <!-- Name and Gender -->
+            <label for="gender">Gender:</label>
+            <select name="gender" id="Gender" required>
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Other">Other</option>
             </select>
 
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-            <!-- Teléfono -->
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9,12}" placeholder="Ej: 600123456">
+            <!-- Phone -->
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{9,12}" placeholder="Ej: 600123456">
 
-            <!-- Tipo de pizza -->
-            <label for="tipoPizza">Tipo de Pizza:</label>
+            <!-- Type of Pizza -->
+            <label for="tipoPizza">Type of Pizza:</label>
             <select name="tipoPizza" id="tipoPizza" required>
                 <option value="Margarita">Margarita</option>
                 <option value="Pepperoni">Pepperoni</option>
-                <option value="Cuatro Quesos">Cuatro Quesos</option>
+                <option value="Cuatro Quesos">4 Cheeses</option>
                 <option value="Hawaiana">Hawaiana</option>
-                <option value="Vegetariana">Vegetariana</option>
-                <option value="Barbacoa">Barbacoa</option>
+                <option value="Vegetariana">Vegetarian</option>
+                <option value="Barbacoa">BBQ</option>
             </select>
 
-            <!-- Ingredientes extra -->
+            <!-- Extra Ingredients -->
             <fieldset class="extras">
-                <legend>Ingredientes Extra:</legend>
-                <label><input type="checkbox" name="extra[]" value="Queso"> Queso Extra</label>
-                <label><input type="checkbox" name="extra[]" value="Champiñones"> Champiñones</label>
+                <legend>Extra Ingredients:</legend>
+                <label><input type="checkbox" name="extra[]" value="Queso"> Extra Cheese</label>
+                <label><input type="checkbox" name="extra[]" value="Champiñones"> Mushrooms</label>
                 <label><input type="checkbox" name="extra[]" value="Bacon"> Bacon</label>
-                <label><input type="checkbox" name="extra[]" value="Aceitunas"> Aceitunas</label>
+                <label><input type="checkbox" name="extra[]" value="Aceitunas"> Olives</label>
             </fieldset>
 
-            <!-- Envío o recogida -->
-            <fieldset class="envio">
-                <legend>¿Cómo deseas recibir tu pizza?</legend>
-                <label><input type="radio" name="entrega" value="enviar" required> Enviar a casa</label>
-                <label><input type="radio" name="entrega" value="recoger" required> Venir a recoger</label>
+            <!-- Shipping or Pickup -->
+            <fieldset class="delivery">
+                <legend>How would you like to receive your pizza?</legend>
+                <label><input type="radio" name="delivery" value="enviar" required> Ship to Home</label>
+                <label><input type="radio" name="delivery" value="Pick Up" required> Come to Pick Up</label>
             </fieldset>
 
-            <!-- Comentarios -->
-            <label for="comentario">Comentario para el pedido:</label>
-            <textarea name="comentario" id="comentario" rows="4" placeholder="¿Alguna indicación especial?"></textarea>
+            <!-- Feedback -->
+            <label for="comment">Comment for the order:</label>
+            <textarea name="comment" id="comment" rows="4" placeholder="Any special instructions?"></textarea>
 
-            <!-- Botón enviar -->
-            <button type="submit">Realizar Pedido</button>
+            <!-- Submit button -->
+            <button type="submit">Place Order</button>
 
         </form>
     </div>
