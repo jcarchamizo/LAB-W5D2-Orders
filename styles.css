@@ -1,0 +1,91 @@
+/* Fuente y estilo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://images.unsplash.com/photo-1601924579533-6c9b8b5f479b') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #D35400;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #D35400;
+    outline: none;
+}
+
+/* Fieldsets */
+fieldset {
+    border: 2px solid #D35400;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: #D35400;
+}
+
+/* Checkbox y Radio */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Botón */
+button {
+    margin-top: 20px;
+    background-color: #D35400;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #E67E22;
+}

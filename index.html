@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Orders</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Place your Pizza Order!</h1>
+        <form action="/pedido" method="GET">
+            
+            <!-- Nombre y trato -->
+            <label for="trato">Trato:</label>
+            <select name="trato" id="trato" required>
+                <option value="Sr.">Mr.</option>
+                <option value="Sra.">Mrs.</option>
+                <option value="Otre"></option>
+            </select>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <!-- Teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9,12}" placeholder="Ej: 600123456">
+
+            <!-- Tipo de pizza -->
+            <label for="tipoPizza">Tipo de Pizza:</label>
+            <select name="tipoPizza" id="tipoPizza" required>
+                <option value="Margarita">Margarita</option>
+                <option value="Pepperoni">Pepperoni</option>
+                <option value="Cuatro Quesos">Cuatro Quesos</option>
+                <option value="Hawaiana">Hawaiana</option>
+                <option value="Vegetariana">Vegetariana</option>
+                <option value="Barbacoa">Barbacoa</option>
+            </select>
+
+            <!-- Ingredientes extra -->
+            <fieldset class="extras">
+                <legend>Ingredientes Extra:</legend>
+                <label><input type="checkbox" name="extra[]" value="Queso"> Queso Extra</label>
+                <label><input type="checkbox" name="extra[]" value="Champiñones"> Champiñones</label>
+                <label><input type="checkbox" name="extra[]" value="Bacon"> Bacon</label>
+                <label><input type="checkbox" name="extra[]" value="Aceitunas"> Aceitunas</label>
+            </fieldset>
+
+            <!-- Envío o recogida -->
+            <fieldset class="envio">
+                <legend>¿Cómo deseas recibir tu pizza?</legend>
+                <label><input type="radio" name="entrega" value="enviar" required> Enviar a casa</label>
+                <label><input type="radio" name="entrega" value="recoger" required> Venir a recoger</label>
+            </fieldset>
+
+            <!-- Comentarios -->
+            <label for="comentario">Comentario para el pedido:</label>
+            <textarea name="comentario" id="comentario" rows="4" placeholder="¿Alguna indicación especial?"></textarea>
+
+            <!-- Botón enviar -->
+            <button type="submit">Realizar Pedido</button>
+
+        </form>
+    </div>
+</body>
+</html>
